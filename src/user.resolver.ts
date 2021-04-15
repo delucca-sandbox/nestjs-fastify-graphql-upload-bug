@@ -17,7 +17,7 @@ export class UserResolver {
 
   @FooDecorator('foo')
   @Mutation(() => UserObject, { name: 'updateUser' })
-  protected updateUser(@Args() args: UserUpdateArgs) {
+  protected async updateUser(@Args() args: UserUpdateArgs) {
     console.log(args.data.picture);
 
     return {};
